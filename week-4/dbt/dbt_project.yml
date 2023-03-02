@@ -31,4 +31,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  ny-rides:
+  ny_rides:
+
+seeds:
+  ny_rides:
+    taxi_zone_lookup:
+      +column_types:
+        locationid: numeric
